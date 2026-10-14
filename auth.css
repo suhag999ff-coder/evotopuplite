@@ -1,0 +1,52 @@
+/* ═══════════ AUTHENTICATION SCREENS ═══════════ */
+#auth-sec, #login-sec{
+  position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;
+  padding:20px;overflow-y:auto;
+  background:radial-gradient(circle at 20% 15%,rgba(200,16,46,.4),transparent 55%),
+             radial-gradient(circle at 85% 85%,rgba(139,0,0,.3),transparent 50%),
+             linear-gradient(160deg,#1a0008 0%,#3d0010 45%,#1a0008 100%);
+}
+#auth-sec::before, #login-sec::before{
+  content:'';position:fixed;top:-100px;left:-100px;width:400px;height:400px;
+  background:radial-gradient(circle,rgba(200,16,46,.25),transparent 65%);
+  border-radius:50%;pointer-events:none;filter:blur(40px);
+}
+#auth-sec::after, #login-sec::after{
+  content:'';position:fixed;bottom:-100px;right:-100px;width:380px;height:380px;
+  background:radial-gradient(circle,rgba(245,158,11,.15),transparent 65%);
+  border-radius:50%;pointer-events:none;filter:blur(40px);
+}
+.auth-scene,.login-scene{position:relative;width:100%;max-width:420px;z-index:2;padding:20px 0}
+.auth-brand-wrap,.admin-logo-wrap{text-align:center;margin-bottom:26px;position:relative}
+.auth-brand-mark,.admin-logo-icon{
+  width:78px;height:78px;margin:0 auto 16px;border-radius:22px;
+  background:linear-gradient(135deg,rgba(200,16,46,.85),rgba(139,0,0,.9));
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:32px;
+  box-shadow:0 20px 40px -14px rgba(200,16,46,.7);
+  border:1.5px solid rgba(255,255,255,.18);backdrop-filter:blur(10px);
+}
+.auth-brand-mark i,.admin-logo-icon i{
+  background:linear-gradient(135deg,#fff,#fbbf24);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.auth-brand-text{font-size:28px;font-weight:900;color:#fff;letter-spacing:2.5px;margin:0;line-height:1.1;text-transform:uppercase}
+.auth-brand-text span{color:#fbbf24}
+.auth-brand-line{width:64px;height:3px;background:linear-gradient(90deg,#c8102e,#fbbf24);border-radius:2px;margin:14px auto 12px}
+.auth-tagline{text-align:center;color:rgba(255,255,255,.6);font-size:10px;font-weight:800;letter-spacing:3.5px;text-transform:uppercase;margin:0}
+.auth-card{position:relative;background:#fff;border-radius:22px;padding:26px 22px 22px;box-shadow:0 30px 60px -25px rgba(0,0,0,.8);overflow:hidden}
+.auth-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#c8102e 0%,#c8102e 55%,#fbbf24 55%,#fbbf24 100%)}
+.auth-tabs{display:flex;background:#f1f5f9;border:1px solid var(--line);padding:4px;border-radius:12px;margin-bottom:20px}
+.auth-tab{flex:1;padding:11px;border-radius:9px;font-weight:800;font-size:12.5px;color:#64748b;display:flex;align-items:center;justify-content:center;gap:6px;transition:all .3s}
+.auth-tab.on{color:#fff;background:linear-gradient(135deg,#c8102e,#8b0000);box-shadow:0 6px 20px -8px rgba(200,16,46,.65)}
+.auth-tab i{font-size:11px}
+.auth-field{position:relative;margin-bottom:12px}
+.auth-input{width:100%;background:#f8fafc;border:1.5px solid var(--line);border-radius:12px;padding:14px 44px;color:#111827;font-size:13px;font-weight:600;transition:all .25s;outline:none}
+.auth-input::placeholder{color:#94a3b8;font-weight:500;font-size:12.5px}
+.auth-input:focus{border-color:var(--primary);background:#fff;box-shadow:0 0 0 4px rgba(200,16,46,.12)}
+.auth-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:13px;pointer-events:none}
+.auth-input:focus~.auth-icon{color:var(--primary)}
+.auth-eye-btn{position:absolute;right:9px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:9px;display:flex;align-items:center;justify-content:center;color:#94a3b8}
+.auth-eye-btn i{font-size:11px}
+.auth-btn{width:100%;background:linear-gradient(135deg,#c8102e 0%,#e2136e 100%);color:#fff;font-weight:900;font-size:13px;padding:15px;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:9px;letter-spacing:1.5px;text-transform:uppercase;box-shadow:0 12px 30px -9px rgba(200,16,46,.7);margin-top:6px}
+.auth-btn:active{transform:scale(.98)}
+.auth-btn i{font-size:11px}

@@ -1,0 +1,13 @@
+{
+  "name": "evo-topup",
+  "version": "2.0.0",
+  "description": "EVO TOPUP - Premium Topup Platform (User + Admin Panels)",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve . -l 3000",
+    "deploy:rules": "firebase deploy --only firestore:rules,firestore:indexes"
+  },
+  "keywords": ["topup", "firebase", "vercel", "admin-panel"],
+  "license": "MIT"
+}
